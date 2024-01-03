@@ -25,16 +25,18 @@ header.header .logo{
   align-items: center;
   gap: 5px;
 }
-
+.header .logo img {
+  width: 30px;
+}
 .header .logo h2 {
   color: var(--goy);
-  font-size: 20px;
+  font-size: 19px;
 }
 .header .nav-links {
   display: flex;
   justify-content: space-around;
   flex-basis: 45%;
-  /* background-color: #3A68B8; */
+  
 }
 .header .nav-links a {
   text-decoration: none;
@@ -79,27 +81,116 @@ width: 100%;
   color: var(--ag);
   cursor: pointer;
 }
+/* content starts */
+.content {
+  padding: 50px 5px;
+}
+.content .left h3 {
+  color: var(--goy);
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+}
 
+.content .left h1 {
+  color: var(--ag);
+  font-size: 35px;
+  text-align: center;
+}
+
+.content .left p {
+  text-align: center;
+  color: var(--ag);
+  font-size: 16px;
+  opacity: .5;
+  padding-top: 20px;
+}
+
+.content .left .buttons {
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.content .left .buttons button {
+  padding: 15px 30px;
+  background-color: var(--goy);
+  color: var(--ag);
+  border: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 5px 10px 15px rgba(0, 0, 0,.3);
+  /* font-size: 15px; */
+}
+.buttons button span {
+  margin-left: 4px;
+}
+.content .right {
+  padding-top: 30px;
+  width: 310px;
+  margin: 0 auto;
+}
+.content .right img {
+  width: 100%;
+}
 @media (min-width:576px) and (max-width:991px) {
 
   header.header {
-    padding: 12px 15px;
+    padding: 15px 15px;
+  }
+  .header .logo img {
+    width: 45px;
+  }
+  .header .logo h2 {
+    font-size: 24px;
   }
   .header .nav-links {
     display: flex;
     gap: 5px;
+    flex-basis: 50%;
   }
   .nav-links a {
-    font-size: 18px;
+    font-size: 20px;
   }
   .header .fa-bars {
+    font-size: 30px;
+  }
+  /* content starts */
+  .content {
+    padding: 70px 15px;
+  }
+  .content .left h3 {
+    font-size: 30px;
+  }
+  .content .left h1 {
+    font-size: 60px;
+  }
+  .content .left p {
     font-size: 25px;
   }
+  .content .left .buttons {
+    gap: 10px;
+  }
+  .content .left .buttons button {
+    padding: 20px 40px;
+    font-size: 23px;
+  }
+  .content .right {
+    padding-top: 30px;
+    width: 510px;
+  }
+
 }
 
 @media (min-width:992px) {
   .fa-bars {
     display: none;
+  }
+  header.header {
+    padding: 15px 20px;
+  }
+  .header .logo img {
+    width: 45px;
   }
   .header .btn-Sign {
     display: flex;
@@ -111,4 +202,32 @@ width: 100%;
   .header .logo h2 {
     font-size: 25px;
   }
+  /* content starts */
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  .content .left h3 {
+    font-size: 20px;
+    text-align: left;
+  }
+  .content .left h1 {
+    font-size: 55px;
+    text-align: left;
+  }
+  .content .left p {
+    text-align: left;
+    font-size: 20px;
+    width: 80%;
+  }
+  .content .left .buttons {
+    justify-content: flex-start;
+  }
+  .content .right {
+    padding-top: 60px;
+    width: 910px;
+  }
+ 
 }
