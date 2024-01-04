@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&display=swap');
+
 :root {
   --goy: #3A68B8;
   --ag: #fff;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +13,7 @@
 
 body {
   background: linear-gradient(#08101e, #020a18);
-  font-family: Open Sans,sans-serif;
+  font-family: Open Sans, sans-serif;
 }
 
 header.header {
@@ -20,24 +22,29 @@ header.header {
   align-items: center;
   padding: 10px 11px;
 }
-header.header .logo{
+
+header.header .logo {
   display: flex;
   align-items: center;
   gap: 5px;
 }
+
 .header .logo img {
   width: 30px;
 }
+
 .header .logo h2 {
   color: var(--goy);
   font-size: 19px;
 }
+
 .header .nav-links {
   display: flex;
   justify-content: space-around;
   flex-basis: 45%;
-  
+
 }
+
 .header .nav-links a {
   text-decoration: none;
   color: var(--ag);
@@ -49,18 +56,19 @@ header.header .logo{
   height: 3px;
   width: 0;
   background-color: var(--goy);
-  transition: all .5s cubic-bezier(.33,.67,.78,.32);
+  transition: all .5s cubic-bezier(.33, .67, .78, .32);
   transition-delay: .1s;
 }
 
 .nav-links a:hover::after {
-width: 100%;
+  width: 100%;
 }
+
 .header .nav-links {
   display: none;
 }
 
-.header .btn-Sign  {
+.header .btn-Sign {
   background-color: var(--goy);
   color: var(--ag);
   padding: 13px 20px;
@@ -73,18 +81,22 @@ width: 100%;
 .header .btn-Sign:hover {
   transform: scale(1.1);
 }
+
 .header .btn-Sign {
   display: none;
 }
+
 .header .fa-bars {
   font-size: 22px;
   color: var(--ag);
   cursor: pointer;
 }
+
 /* content starts */
 .content {
   padding: 50px 5px;
 }
+
 .content .left h3 {
   color: var(--goy);
   font-size: 16px;
@@ -112,6 +124,7 @@ width: 100%;
   justify-content: center;
   gap: 5px;
 }
+
 .content .left .buttons button {
   padding: 15px 30px;
   background-color: var(--goy);
@@ -119,89 +132,212 @@ width: 100%;
   border: transparent;
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 5px 10px 15px rgba(0, 0, 0,.3);
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, .3);
   /* font-size: 15px; */
 }
+
 .buttons button span {
   margin-left: 4px;
 }
+
 .content .right {
   padding-top: 30px;
   width: 310px;
   margin: 0 auto;
 }
+
 .content .right img {
   width: 100%;
 }
+
+/* logos */
+.logos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0 30px 0;
+}
+
+.logos img {
+  width: 150px;
+}
+
+/* info starts */
+
+.info .left-side {
+  width: 310px;
+  margin: 0 auto;
+  padding: 30px 5px;
+}
+
+.info .left-side img {
+  width: 100%;
+}
+
+.info .right-side {
+  padding: 20px 5px;
+}
+
+.info .right-side h3 {
+  color: var(--ag);
+  font-size: 23px;
+  text-align: center;
+}
+
+.info .right-side p {
+  text-align: center;
+  color: var(--ag);
+  font-size: 16px;
+  opacity: .5;
+  padding-top: 20px;
+}
+
+.info .right-side .buttons {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0 30px 0;
+}
+
+.info .right-side .buttons button {
+  padding: 15px 30px;
+  background-color: var(--goy);
+  color: var(--ag);
+  border: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, .3);
+  font-size: 18px;
+}
+
 @media (min-width:576px) and (max-width:991px) {
 
   header.header {
     padding: 15px 15px;
   }
+
   .header .logo img {
     width: 45px;
   }
+
   .header .logo h2 {
     font-size: 24px;
   }
+
   .header .nav-links {
     display: flex;
     gap: 5px;
     flex-basis: 50%;
   }
+
   .nav-links a {
     font-size: 20px;
   }
+
   .header .fa-bars {
     font-size: 30px;
   }
+
   /* content starts */
   .content {
     padding: 70px 15px;
   }
+
   .content .left h3 {
     font-size: 30px;
   }
+
   .content .left h1 {
     font-size: 60px;
   }
+
   .content .left p {
     font-size: 25px;
   }
+
   .content .left .buttons {
     gap: 10px;
   }
+
   .content .left .buttons button {
     padding: 20px 40px;
     font-size: 23px;
   }
+
   .content .right {
     padding-top: 30px;
-    width: 510px;
+    width: 710px;
   }
 
+  /* logos */
+  .logos {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 18px;
+  }
+
+  .logos img:nth-child(4) {
+    display: none;
+  }
+
+  .logos img {
+    width: 190px;
+  }
+
+  /* info starts */
+  .info .left-side {
+    width: 710px;
+    margin: 0 auto;
+    padding: 30px 5px;
+  }
+
+  .info .right-side h3 {
+    font-size: 43px;
+  }
+
+  .info .right-side p {
+    font-size: 24px;
+    padding-top: 20px;
+  }
+
+  .info .right-side .buttons {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+  }
+
+  .info .right-side .buttons button {
+    padding: 20px 40px;
+    font-size: 23px;
+  }
 }
 
 @media (min-width:992px) {
   .fa-bars {
     display: none;
   }
+
   header.header {
     padding: 15px 20px;
   }
+
   .header .logo img {
     width: 45px;
   }
+
   .header .btn-Sign {
     display: flex;
   }
+
   .header .nav-links {
     display: flex;
     flex-basis: 35%;
   }
+
   .header .logo h2 {
     font-size: 25px;
   }
+
   /* content starts */
   .content {
     display: flex;
@@ -209,25 +345,68 @@ width: 100%;
     align-items: center;
     padding: 40px 20px;
   }
+
   .content .left h3 {
     font-size: 20px;
     text-align: left;
   }
+
   .content .left h1 {
     font-size: 55px;
     text-align: left;
   }
+
   .content .left p {
     text-align: left;
     font-size: 20px;
     width: 80%;
   }
+
   .content .left .buttons {
     justify-content: flex-start;
   }
+
   .content .right {
     padding-top: 60px;
     width: 910px;
   }
- 
+
+  /* logos */
+  .logos {
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 20px 20px 30px 20px;
+  }
+
+  .logos img {
+    width: 200px;
+  }
+
+  /* info starts */
+  .info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  .info .left-side {
+    width: 610px;
+  }
+  .info .right-side h3 {
+    font-size: 35px;
+    text-align: left;
+  }
+.info .right-side {
+  flex: 1;
+}
+  .info .right-side p {
+    text-align: left;
+    font-size: 18px;
+    width: 80%;
+  }
+  .info .right-side .buttons {
+    justify-content: flex-start;
+  }
+
 }
